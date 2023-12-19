@@ -107,6 +107,80 @@ function HomeScreen() {
           </div>
         </div>
       </section>
+
+      {/* services section */}
+      <section id="services" className="services">
+        <div className="container" data-aos="fade-up">
+          <div className="section-title">
+            <h2>Services</h2>
+          </div>
+
+          <div className="row">
+            <div
+              className="col-lg-4 col-md-6 d-flex align-items-stretch"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <div className="icon-box">
+                <div className="icon">
+                  <i className="bx bxl-dribbble"></i>
+                </div>
+                <h4>
+                  <a href=""> Mindfulness Meditation </a>
+                </h4>
+                <p>
+                  {" "}
+                  Our Mindfulness meditation program utilizes AI technology to
+                  deliver personalized guided meditations and regular meditation
+                  practice that fits your lifestyle and supports your mental
+                  health.{" "}
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div className="icon-box">
+                <div className="icon">
+                  <i className="bx bx-file"></i>
+                </div>
+                <h4>
+                  <a href=""> Mindfulness-Based Cognitive Therapy </a>
+                </h4>
+                <p>
+                  {" "}
+                  Our mindfulness-based cognitive therapy program helps you
+                  manage negative thoughts, emotions and behaviours.{" "}
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div className="icon-box">
+                <div className="icon">
+                  <i className="bx bx-tachometer"></i>
+                </div>
+                <h4>
+                  <a href=""> Mindfulness-Based Stress Reduction </a>
+                </h4>
+                <p>
+                  {" "}
+                  Offers a holistic approach to stress management that
+                  incorporates mindfulness practices, yoga and body awareness
+                  techniques.{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
