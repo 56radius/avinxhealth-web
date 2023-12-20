@@ -25,7 +25,7 @@ function App() {
             element={showSplash ? <SplashScreen /> : <HomeScreen />}
           />
           <Route path="/login" element={<LoginScreen />} />
-          <Route path="/login" element={<DashboardScreen />} />
+          <Route path="/dashboard" element={<DashboardScreen />} />
         </Routes>
       </div>
     </Router>

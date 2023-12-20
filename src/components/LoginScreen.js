@@ -90,6 +90,7 @@ function LoginScreen() {
                               className="btn btn-primary w-100"
                               name="login"
                               type="submit"
+                              onClick={() => navigate("/dashboard")}
                             >
                               Login
                             </button>
