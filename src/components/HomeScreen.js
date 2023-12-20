@@ -1,5 +1,8 @@
 import React from "react";
 
+//react-router-navigation
+import { useNavigate } from "react-router-dom";
+
 //importing css files
 import ".././assets/css/style.css";
 import ".././assets/vendor/bootstrap/css/bootstrap.min.css";
@@ -13,6 +16,7 @@ import ".././assets/vendor/swiper/swiper-bundle.min.css";
 import mind from ".././assets/img/mind.png";
 
 function HomeScreen() {
+  const navigate = useNavigate();
   return (
     <div>
       {/* Navbar */}
@@ -63,7 +67,7 @@ function HomeScreen() {
                 <a
                   style={{ textDecoration: "none" }}
                   className="getstarted scrollto"
-                  href="dashboard/login.php"
+                  onClick={() => navigate("/login")}
                 >
                   {" "}
                   Try AVA{" "}
@@ -364,13 +368,15 @@ function HomeScreen() {
       </main>
 
       {/* Footer */}
-      <footer style={{ textAlign: "center" }} id="footer">
+      <footer id="footer">
         <div class="container d-md-flex py-4">
           <div class="me-md-auto text-center text-md-start">
             <div class="copyright">
               &copy; Copyright{" "}
               <strong>
-                <span>Avinx Nation | Health </span>
+                <span style={{ color: "green", textAlign: "center" }}>
+                  Avinx Nation | Health{" "}
+                </span>
               </strong>
               . All Rights Reserved
             </div>
@@ -381,18 +387,13 @@ function HomeScreen() {
 
         <div className="container d-md-flex py-4">
           <div className="social-links text-center text-md-right pt-3 pt-md-0">
-            <a href="#" className="twitter">
-              <i className="bx bxl-twitter"></i>
-            </a>
             <a href="#" className="facebook">
               <i className="bx bxl-facebook"></i>
             </a>
             <a href="#" className="instagram">
               <i className="bx bxl-instagram"></i>
             </a>
-            <a href="#" className="google-plus">
-              <i className="bx bxl-skype"></i>
-            </a>
+
             <a href="#" className="linkedin">
               <i className="bx bxl-linkedin"></i>
             </a>

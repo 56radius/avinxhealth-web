@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SplashScreen from "./components/SplashScreen";
 import HomeScreen from "./components/HomeScreen";
+import LoginScreen from "./components/LoginScreen";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -22,8 +23,7 @@ function App() {
             path="/"
             element={showSplash ? <SplashScreen /> : <HomeScreen />}
           />
-          {/* 
-          <Route path="/register" element={<RegisterScreen />} /> */}
+          <Route path="/login" element={<LoginScreen />} />
         </Routes>
       </div>
     </Router>
