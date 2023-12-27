@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SplashScreen from "./components/SplashScreen";
 import HomeScreen from "./components/HomeScreen";
 import LoginScreen from "./components/LoginScreen";
-import DashboardScreen from "./components/dashboard/DashboardScreen";
+import DashboardScreen from "./components/DashboardScreen";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
