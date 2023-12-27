@@ -1,29 +1,40 @@
 import React from "react";
 
-import logo from ".././assets/dashboard/assets/img/logo.png";
+//importing navigation files
+import { useNavigate } from "react-router-dom";
+
+import logo from "../.././assets/dashboard/assets/img/logo.png";
 
 //importing css files
-import ".././assets/dashboard/assets/css/style.css";
-import ".././assets/dashboard/assets/vendor/bootstrap/css/bootstrap.min.css";
-import ".././assets/dashboard/assets/vendor/bootstrap-icons/bootstrap-icons.css";
-import ".././assets/dashboard/assets/vendor/boxicons/css/boxicons.min.css";
+import "../.././assets/dashboard/assets/css/style.css";
+import "../.././assets/dashboard/assets/vendor/bootstrap/css/bootstrap.min.css";
+import "../.././assets/dashboard/assets/vendor/bootstrap-icons/bootstrap-icons.css";
+import "../.././assets/dashboard/assets/vendor/boxicons/css/boxicons.min.css";
 
 function DashboardScreen() {
+  const navigate = useNavigate();
   return (
-    <div>
+    <div className="body">
       <header
         id="header"
         className="header fixed-top d-flex align-items-center"
       >
         <div className="d-flex align-items-center justify-content-between">
-          <a href="index.html" className="logo d-flex align-items-center">
+          <a
+            style={{ textDecoration: "none" }}
+            href="index.html"
+            className="logo d-flex align-items-center"
+          >
             <img src={logo} alt="logo" />
-            <span className="d-none d-lg-block"> Avinx Nation </span>
+            <span className="d-none d-lg-block">
+              {" "}
+              <span style={{ color: "green" }}> Avinx </span> Nation{" "}
+            </span>
           </a>
           <i className="bi bi-list toggle-sidebar-btn"></i>
         </div>
 
-        {/* 
+        {/* profile */}
         <nav className="header-nav ms-auto">
           <ul className="d-flex align-items-center">
             <li className="nav-item d-block d-lg-none">
@@ -177,9 +188,10 @@ function DashboardScreen() {
               </ul>
             </li>
           </ul>
-        </nav> */}
+        </nav>
       </header>
 
+      {/* side bar nav bar */}
       <aside id="sidebar" className="sidebar ">
         <ul className="sidebar-nav" id="sidebar-nav">
           <li className="nav-item">
@@ -197,10 +209,14 @@ function DashboardScreen() {
           </li>
 
           <li className="nav-item">
-            <a className="nav-link collapsed" href="try_ava.html">
+            <button
+              style={{ borderWidth: 0, backgroundColor: "#fff" }}
+              className="nav-link collapsed"
+              onClick={() => navigate("/tryava")}
+            >
               <i className="bi bi-dash-circle"></i>
               <span> Try AVA </span>
-            </a>
+            </button>
           </li>
 
           <li className="nav-item">
@@ -295,6 +311,198 @@ function DashboardScreen() {
           </li>
         </ul>
       </aside>
+
+      {/* Main Dashboard */}
+      <main id="main" class="main">
+        <div class="pagetitle">
+          <h1>
+            {" "}
+            <span style={{ color: "green" }}> User's </span> Dashboard{" "}
+          </h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </nav>
+        </div>
+
+        <section class="section dashboard">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="row">
+                <div class="col-xxl-4 col-md-6">
+                  <div class="card info-card sales-card">
+                    <div class="filter">
+                      <a class="icon" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-three-dots"></i>
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                        <li class="dropdown-header text-start">
+                          <h6> Pick Your Choice </h6>
+                        </li>
+
+                        <li>
+                          <a class="dropdown-item" href="yoga.html">
+                            {" "}
+                            Yoga{" "}
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="exercise.html">
+                            {" "}
+                            Exercise{" "}
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="mind_planning.html">
+                            {" "}
+                            Mind Planning{" "}
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="card-body">
+                      <h5 class="card-title"> Mindful Minutes </h5>
+
+                      <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                          <i style={{ color: "green" }} class="bi bi-peace"></i>
+                        </div>
+                        <div class="ps-3">
+                          <h6> Solace </h6>
+                          <span>
+                            {" "}
+                            Check in to plan and check out some exercises to
+                            relief stress on your mind{" "}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xxl-4 col-md-6">
+                  <div class="card info-card revenue-card">
+                    <div class="filter">
+                      <a class="icon" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-envelope"></i>
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                        <li class="dropdown-header text-start">
+                          <h6> </h6>
+                        </li>
+
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            Today
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            This Month
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            This Year
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="card-body">
+                      <h5 class="card-title"> Feedback </h5>
+
+                      <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                          <i
+                            style={{ color: "blue" }}
+                            class="bi bi-envelope"
+                          ></i>
+                        </div>
+                        <div class="ps-3">
+                          <h6> How do we improve? </h6>
+                          <span
+                            class="text-muted small pt-2 ps-1"
+                            style={{ color: "green" }}
+                          >
+                            {" "}
+                            Click on the envelope icon on the top right to give
+                            us a feedback on how to improve{" "}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="col-xxl-4 col-xl-12">
+                <div class="card info-card customers-card">
+                  <div class="filter">
+                    <a class="icon" href="index.html" data-bs-toggle="dropdown">
+                      <i class="bi bi-three-dots"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                      <li class="dropdown-header text-start">
+                        <h6>Filter</h6>
+                      </li>
+
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Today
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          This Month
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          This Year
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="card-body">
+                    <h5 class="card-title"> Mind Health Trends </h5>
+
+                    <div class="d-flex align-items-center">
+                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i style={{ color: "green" }} class="bi bi-people"></i>
+                      </div>
+                      <div class="ps-3">
+                        <h6>1244</h6>
+                        <span class="text-muted small pt-2 ps-1">
+                          {" "}
+                          Health looks for trends in certain topics and can
+                          notify you when there's a change{" "}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer id="footer" className="footer">
+        <div className="copyright">
+          &copy; Copyright 2023 Avinx Nation All Rights Reserved
+        </div>
+        <div className="credits"></div>
+      </footer>
     </div>
   );
 }
